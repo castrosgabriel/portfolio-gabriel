@@ -14,7 +14,7 @@ const ScrollToTopOnNavigation: React.FC = () => {
     return null;
 };
 
-const Mb = () => {
+const Ugly = () => {
     return (
         <div>
             <ScrollToTopOnNavigation />
@@ -29,4 +29,4 @@ const Mb = () => {
         </div>
 )}
 
-export default Mb
+export default Ugly
