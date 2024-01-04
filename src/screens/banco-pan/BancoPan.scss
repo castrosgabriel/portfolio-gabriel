@@ -1,0 +1,223 @@
+.challenge-container {
+    display: flex;
+    padding: 140px 96px 140px 96px;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+    gap: 140px;
+
+    .challenge {
+        display: flex;
+        gap: 56px;
+
+        h1 {
+            color: #00AFFF;
+        }
+    }
+
+    .target {
+        background-image: url('../../assets/png/pan/target.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        border-radius: 32px;
+        padding: 32px;
+        width: 100%;
+        height: 400px;
+        justify-content: flex-end;
+        gap: 16px;
+
+        h1 {
+            color: var(--color-secondary);
+        }
+    }
+}
+
+.pan-research {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 96px 64px 96px 64px;
+
+    h1 {
+        color: var(--color-secondary);
+    }
+}
+
+.hypotesis {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    padding: 96px;
+    gap: 32px;
+
+    h4 {
+        color: var(--color-secondary);
+        text-align: center;
+    }
+
+    img {
+        width: 80%;
+    }
+}
+
+.bg-research {
+    width: 100%;
+}
+
+.validation {
+    padding: 64px;
+
+    h4 {
+        color: #56CCF2;
+
+        span {
+            color: var(--color-secondary);
+        }
+    }
+}
+
+.pan-proposal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 96px 64px 96px 64px;
+
+    img {
+        width: 60%;
+    }
+}
+
+.pan-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    flex: 1;
+    align-items: center;
+    padding: 96px;
+
+    .pan-section {
+        display: flex;
+        padding-bottom: 16px;
+        border-bottom: 2px solid black;
+        width: 70%;
+
+        h1 {
+            color: var(--color-secondary);
+        }
+    }
+
+    img {
+        width: 70%;
+    }
+}
+
+.pan-results-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 64px;
+    padding: 96px;
+
+    h4{
+        color: var(--color-secondary)
+    }
+
+    .pan-results {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .pan-result-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            div {
+                display: flex;
+                gap: 8px;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .challenge-container {
+        padding: 64px 32px 64px 32px;
+        gap: 48px;
+        align-items: flex-start;
+
+        .challenge {
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .target {
+            height: 300px;
+            width: calc(100% - 48px);
+            padding: 24px;
+            gap: 8px;
+
+        }
+    }
+
+    .pan-research {
+        padding: 64px 32px 64px 32px;
+    }
+
+    .hypotesis {
+        padding: 64px 32px 64px 32px;
+
+        img {
+            width: 340px;
+        }
+    }
+
+    .validation {
+        padding: 32px;
+
+        h4 {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+
+    .pan-proposal {
+        flex-direction: column;
+        gap: 32px;
+        padding: 64px 32px 64px 32px;
+
+        img {
+            width: 340px;
+            height: auto;
+        }
+    }
+
+    .pan-section-container {
+        padding: 64px 32px 64px 32px;
+
+        .pan-section {
+            gap: 16px;
+            padding-bottom: 8px;
+            width: 100%;
+            
+        }
+
+        img {
+            width: 340px;
+            height: auto;
+        }
+    }
+
+    .pan-results-container {
+        padding: 64px 32px 64px 32px;
+        gap: 32px;
+    }
+    
+}

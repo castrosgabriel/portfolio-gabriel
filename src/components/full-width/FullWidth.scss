@@ -1,0 +1,15 @@
+.full-width {
+    background-color: #820AD1;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    .container {
+        display: flex;
+        max-width: 1440px;
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+}

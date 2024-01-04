@@ -1,0 +1,158 @@
+.project-template {
+  background-color: #820AD1;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+
+  .project-cover {
+    display: flex;
+    gap: 40px;
+    max-width: 1440px;
+    flex: 1;
+
+    .project-img-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex: 1;
+      padding-right: 64px;
+
+      img {
+        height: 75%;
+      }
+    }
+
+    .project-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      flex: 1;
+      padding-left: 64px;
+
+      img {
+        max-width: 100px;
+        max-height: 100px;
+      }
+
+      .project-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        align-self: stretch;
+        color: var(--color-secondary);
+        overflow: hidden;
+        padding-bottom: 8px;
+      }
+
+      .see-more {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        cursor: pointer;
+        transition: all 300ms;
+        opacity: .5;
+        color: var(--color-secondary);
+
+        svg {
+          width: 352px;
+          transition: all 300ms;
+          transform-origin: left;
+          fill: var(--color-secondary);
+        }
+      }
+
+      .see-more:hover {
+        opacity: 1;
+
+        svg {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+
+    .project-cover {
+      flex-direction: column;
+      flex: 1;
+      padding: 0px 32px;
+      gap: unset;
+
+      .project-img-container {
+        overflow: hidden;
+        align-items: flex-start;
+        padding-right: 24px;
+        
+
+        img {
+          height: auto;
+          width: 100%;
+        }
+
+      }
+
+      .project-info {
+        height: 50vh;
+        padding: unset;
+
+        img {
+          width: 64px;
+        }
+
+        .project-text {
+          gap: 8px;
+        }
+
+        .see-more {
+          width: 260px;
+          gap: 0px;
+
+          svg {
+            width: 260px;
+          }
+        }
+      }
+
+    }
+  }
+
+  @media screen and (max-width: 1124px) and (min-width: 701px) {
+
+    .project-cover {
+      max-width: 1440px;
+
+      .project-img-container {
+        width: 40vw;
+        overflow: hidden;
+        padding: 0;
+        margin-right: 70px;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .project-info{
+
+
+        .see-more{
+          gap:4px;
+        }
+        img{
+          max-width: 80px;
+          max-height: 80px;
+        }
+      }
+
+
+    }
+
+  }
+
+}

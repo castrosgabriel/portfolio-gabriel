@@ -1,0 +1,231 @@
+.container-column {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    gap: 40px;
+
+    .resume-container {
+        display: flex;
+        gap: 80px;
+        width: 100%;
+        padding: 0px 64px;
+
+        .resume-info {
+            display: flex;
+            flex-direction: column;
+            width: 20vw;
+            height: 100%;
+            gap: 80px;
+
+
+            .about {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .linked-in {
+                opacity: 0.5;
+                cursor: pointer;
+                transition: all 300ms;
+
+                svg {
+                    transition: all 300ms;
+                    transform-origin: left;
+                }
+
+                &:hover {
+                    opacity: 1;
+
+                    svg {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        ul {
+            left: 20vw;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            border-left: solid 3px;
+            padding-left: 80px;
+            margin: 0px 0px 48px 0px;
+
+
+            li {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                p {
+                    display: unset;
+                    margin: 0;
+                    color: #A8A8A8;
+                    font-family: Helvetica Neue;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: -0.48px;
+                }
+
+                .company {
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        background-color: #A8A8A8;
+                    }
+                }
+            }
+        }
+
+        .spacer-line {
+            height: 2px;
+            background-color: black;
+            width: 200px;
+        }
+
+        .agency-experience {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+
+            img {
+                height: 24px;
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .container-column {
+
+        flex-direction: column-reverse;
+
+        .resume-container {
+            flex-direction: column;
+            gap: 48px;
+            width: auto;
+            padding: 32px 24px 0px 24px;
+
+            .resume-info {
+                display: flex;
+                flex-direction: column;
+                width: auto;
+                height: unset;
+                gap: 32px;
+
+                .linked-in {
+                    display: none;
+                }
+
+
+                .about {
+                    gap: 32px;
+
+                    h3 {
+                        display: none;
+                    }
+                }
+
+                .linked-in {
+                    opacity: 0.5;
+                    cursor: none;
+                    transition: none;
+
+                    &:hover {
+                        opacity: 0.5;
+
+                        svg {
+                            transform: none;
+                        }
+                    }
+                }
+            }
+
+            ul {
+                left: 0px;
+                gap: 32px;
+                border-left: none;
+                padding-left: 0;
+
+            }
+
+
+            .agency-experience {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                img {
+                    height: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1124px) {
+
+    .container-column {
+
+
+        .resume-container {
+            display: flex;
+            gap: 80px;
+            width: 100%;
+            padding: 0px 64px;
+
+            .resume-info {
+                display: flex;
+                flex-direction: column;
+                width: 30vw;
+                height: 100%;
+                gap: 80px;
+
+
+                .about {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                }
+
+                .linked-in {
+                    opacity: 0.5;
+                    cursor: pointer;
+                    transition: all 300ms;
+                    align-items: flex-start;
+                    display: flex;
+
+                    svg {
+                        transition: all 300ms;
+                        transform-origin: left;
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+
+                    }
+
+                    &:hover {
+                        opacity: 1;
+
+                        svg {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

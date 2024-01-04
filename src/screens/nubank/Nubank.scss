@@ -1,0 +1,478 @@
+body {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: auto;
+
+}
+
+.product-container {
+    display: flex;
+    padding: 120px 64px 120px 64px;
+    gap: 104px;
+
+    .premise {
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
+
+        .premise-title {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+
+            h1 {
+                color: #820AD1;
+            }
+
+            h2 {
+                color: #FFFFFF;
+            }
+        }
+
+        .premise-info {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            .macro-item {
+                color: #e6c1ff;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                padding: 24px;
+                border: solid;
+                border-radius: 16px;
+                width: fit-content;
+            }
+
+            img {
+                width: 375px;
+            }
+
+            .explainer-nu {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                h2 {
+                    color: #FF39B0;
+                }
+
+                h3 {
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+
+    }
+}
+
+
+.indicator {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    h3 {
+        background-color: #820AD1;
+        color: var(--color-secondary);
+        padding: 8px 12px;
+        width: fit-content;
+    }
+}
+
+.container-center {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0px;
+    gap: 40px;
+
+    .screen-structure-container {
+
+        display: flex;
+        gap: 16px;
+
+        .general-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 30vw;
+            padding-top: 128px;
+
+            h3 {
+                border-right: solid;
+                border-color: #4F4F4F;
+                padding: 8px 16px;
+                text-align: right;
+                color: #4F4F4F;
+                align-items: center;
+                justify-content: flex-end;
+                display: flex;
+
+            }
+
+            .t1 {
+                margin-bottom: 24px;
+            }
+
+            .t2 {
+                height: 80px;
+                margin-bottom: 24px;
+            }
+
+            .t3 {
+                height: 72px;
+            }
+
+            .t4 {
+                flex: 1;
+                margin-bottom: 48px;
+                align-items: flex-start;
+                padding-top: 24px;
+            }
+
+        }
+
+        .screen-structure {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+
+            .screen-structure-img {
+                display: flex;
+                flex-direction: column;
+            }
+
+            img {
+                width: 400px;
+            }
+        }
+
+        .macro-category-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 30vw;
+            padding-top: 464px;
+
+            h3 {
+                background-color: #820AD1;
+                color: var(--color-secondary);
+                padding: 8px 12px;
+                width: fit-content;
+            }
+        }
+    }
+}
+
+
+
+.categorization-experience-container {
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0px;
+
+    .categorization-experience {
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
+
+        .categorization-experience-text {
+
+            text-align: right;
+            display: flex;
+            gap: 56px;
+            padding: 0px 72px;
+
+            h1 {
+                color: #820AD1;
+            }
+
+            h3 {
+                color: var(--color-secondary);
+                text-align: left;
+            }
+        }
+
+        .spacer {
+            background-color: #820AD1;
+            height: 2px;
+            margin: 0px 72px;
+        }
+
+        .categorization-experience-img {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            padding: 0px 200px;
+
+            img {
+                width: 30%;
+            }
+        }
+    }
+}
+
+.monthly-recap {
+    background-color: #820AD1;
+    height: 100vh;
+
+    .monthly-recap-info {
+        display: flex;
+        max-width: 1440px;
+        gap: 80px;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+        padding: 0px 64px;
+
+
+        .monthly-recap-text {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 20vw;
+            justify-content: center;
+
+            h1,
+            h3 {
+                color: var(--color-secondary);
+                text-align: right;
+            }
+        }
+
+        .monthly-recap-video-container {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+
+            img {
+                height: 80vh;
+            }
+        }
+    }
+}
+
+.journey {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+
+    .journey-text {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+
+
+        .spacer {
+            background-color: var(--color-secondary);
+            height: 4px;
+        }
+
+        h1 {
+            color: var(--color-secondary);
+        }
+    }
+
+    img {
+        width: 80%;
+    }
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    height: 100vh;
+
+    h2 {
+        color: var(--color-secondary);
+    }
+
+    .details-img {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+
+        img {
+            width: 25%;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .indicator {
+        display: none;
+    }
+
+    .product-container {
+        flex-direction: column;
+        padding: 32px 32px 64px 32px;
+        gap: 64px;
+
+        .premise {
+            gap: 32px;
+
+            .premise-title {
+                gap: 8px;
+
+                h1 {
+                    color: #820AD1;
+                }
+
+                h2 {
+                    color: #FFFFFF;
+                }
+            }
+
+            .premise-info {
+                gap: 16px;
+
+                .macro-item {
+                    padding: 16px;
+                    width: 70%;
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                .explainer-nu {
+                    gap: 8px;
+                }
+            }
+        }
+    }
+
+    .container-center {
+        padding: 48px 0px;
+        gap: 32px;
+
+        .screen-structure-container {
+            flex-direction: column;
+            gap: 32px;
+
+            .general-info {
+                display: none;
+            }
+
+            .screen-structure {
+                padding-top: 0px;
+                gap: 16px;
+                .screen-structure-img {
+                    align-items: center;
+                }
+
+                img {
+                    width: 80%;
+                }
+            }
+
+            .macro-category-info {
+                width: 100%;
+                padding-top: 0px;
+                gap: 8px;
+            }
+        }
+    }
+
+    .categorization-experience-container {
+        padding: 48px 16px;
+
+        .categorization-experience {
+            gap: 32px;
+            width: 100vw;
+
+            .spacer{
+                margin: 0px 32px;
+            }
+
+            .categorization-experience-text {
+                flex-direction: column;
+                padding: 16px 32px;
+                gap: 32px;
+
+                h1 {
+                    text-align: left;
+                }
+
+
+                // h3 {
+                //     text-align: center;
+                // }
+            }
+
+            .categorization-experience-img {
+                padding: 0px 32px;
+                gap: 16px;
+                flex-direction: column;
+
+                img {
+                width: 280px;
+                }
+            }
+        }
+    }
+
+    .monthly-recap {
+        height: fit-content;
+
+        .monthly-recap-info {
+            flex-direction: column;
+            gap: 32px;
+            padding: 48px 32px;
+
+            .monthly-recap-text {
+                width: 100%;
+                padding: 0px 32px;
+                gap: 16px;
+                justify-content: center;
+                align-items: flex-start;
+                text-align: center;
+
+                h1,
+                h3 {
+                    text-align: left;
+                }
+            }
+
+            .monthly-recap-video-container {
+                flex-direction: column;
+                gap: 16px;
+
+                img {
+                    width: 280px;
+                }
+            }
+        }
+    }
+
+
+    .details {
+        gap: 32px;
+        padding: 32px;
+        width: 100vw;
+        height: unset;
+
+        .details-img {
+            flex-direction: column;
+            padding: 0px 32px;
+
+            img {
+                width: 280px;
+            }
+        }
+    }
+
+    
+
+}
