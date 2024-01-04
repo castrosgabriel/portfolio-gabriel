@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
-import './Mb.scss';
+import './Ugly.scss';
 import { Link } from 'react-router-dom';
 import { MbLogo } from "../../assets/svg";
 import ProjectHeader from '../../components/project-header/ProjectHeader';
@@ -18,7 +18,6 @@ const Mb = () => {
     return (
         <div>
             <ScrollToTopOnNavigation />
-
             <ProjectHeader
                 projectTitle="Seller's admin <br /> ecommerce"
                 projectSubtitle="NuBank's personal financial manager."
@@ -27,7 +26,6 @@ const Mb = () => {
                 backgroundColor='#212121'
                 secondaryColor='var(--color-secondary)'
             />
-            
         </div>
 )}
 

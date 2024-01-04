@@ -5,7 +5,7 @@ import Home from './screens/home/Home';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Nubank from './screens/nubank/Nubank'
 import Meli from './screens/meli/Meli';
-import Mb from './screens/mb/Mb';
+import Ugly from './screens/ugly-cash/Ugly';
 import BancoPan from './screens/banco-pan/BancoPan';
 import Resume from './screens/resume/Resume';
 import OtherProject from './screens/other-projects/OtherProjects';
@@ -33,7 +33,7 @@ root.render(
         <Route path='/' element={Home()} />
         <Route path='/nubank' element={Nubank()} />
         <Route path='/meli' element={Meli()} />
-        <Route path='/mb' element={Mb()} />
+        <Route path='/uglycash' element={Ugly()} />
         <Route path='/bancopan' element={BancoPan()} />
         <Route path='/resume' element={Resume()} />
         <Route path='/other' element={OtherProject()} />
