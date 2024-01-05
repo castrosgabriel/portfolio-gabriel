@@ -6,7 +6,7 @@ import { MbLogo } from "../../assets/svg";
 import ProjectHeader from '../../components/project-header/ProjectHeader';
 
 import UglyBg from '../../assets/png/ugly/bg-ugly.png';
-import UglyHomeVideo from '../../assets/mp4/home-video.mp4';
+import VideoModularHome from '../../assets/mp4/ugly/modular-home.mp4';
 import FullWidth from '../../components/full-width/FullWidth';
 import Tokens from '../../assets/png/ugly/tokens.png';
 import Components from '../../assets/png/ugly/components.png';
@@ -25,6 +25,12 @@ import FormTemplate from '../../assets/png/ugly/form-template.png';
 
 import PushGit from '../../assets/png/ugly/push-git.png';
 import FigmaTokens from '../../assets/png/ugly/figma-tokens.png';
+import VideoGeneral from '../../assets/mp4/ugly/home-video.mp4';
+
+import ReserveApp from '../../assets/png/ugly/reserve-app.png';
+import ReserveScreen from '../../assets/png/ugly/reserve-screen.png';
+import UglyApp from '../../assets/png/ugly/ugly-app.png';
+import UglyScreen from '../../assets/png/ugly/ugly-screen.png';
 
 
 const ScrollToTopOnNavigation: React.FC = () => {
@@ -48,6 +54,35 @@ const Ugly = () => {
                 secondaryColor='var(--color-secondary)'
                 backgroundImg={UglyBg}
             />
+
+            <div className='new-app-container'>
+                <h4>A new brand asks for a new app.</h4>
+                <div className='new-app-imgs'>
+                    <div className='new-app-item'>
+                        <div className='new-app-title'>
+                            <img src={ReserveApp} className='app-icon' alt="ReserveApp" />
+                            <p>Reserve</p>
+                        </div>
+                        <img src={ReserveScreen} alt="ReserveScreen" />
+                    </div>
+                    <div className='rebrand-arrow'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="116" height="2" viewBox="0 0 116 2" fill="none">
+                            <path d="M116 1H0" stroke="#FA00FF" />
+                        </svg>
+                        <p><i>Rebrand</i></p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="104" height="8" viewBox="0 0 104 8" fill="none">
+                            <path d="M103.854 4.35354C104.049 4.15828 104.049 3.8417 103.854 3.64644L100.672 0.464457C100.476 0.269195 100.16 0.269195 99.9645 0.464457C99.7692 0.65972 99.7692 0.976302 99.9645 1.17156L102.793 3.99999L99.9645 6.82842C99.7692 7.02368 99.7692 7.34026 99.9645 7.53553C100.16 7.73079 100.476 7.73079 100.672 7.53553L103.854 4.35354ZM0.5 4.5L103.5 4.49999L103.5 3.49999L0.5 3.5L0.5 4.5Z" fill="#FA00FF" />
+                        </svg>
+                    </div>
+                    <div className='new-app-item'>
+                        <div className='new-app-title'>
+                            <img src={UglyApp} className='app-icon' alt="UglyApp" />
+                            <p>Ugly Cash</p>
+                        </div>
+                        <img src={UglyScreen} alt="UglyScreen" />
+                    </div>
+                </div>
+            </div>
 
             <FullWidth
                 backgroundColor='#191919'>
@@ -117,21 +152,25 @@ const Ugly = () => {
                     </div>
                 </div>
             </FullWidth>
-            <FullWidth 
-            backgroundColor='#E0E0E0'>
+            <FullWidth
+                backgroundColor='#E0E0E0'>
                 <div className='modular-home-container'>
                     <div className='modular-home-title'>
                         <h1> Modular <br /> Home Screen</h1>
                         <h3>Subtitle for the Section</h3>
                     </div>
-                    <video autoPlay>
-                        <source src={UglyHomeVideo} type="video/mp4" />
-                        Your browser does not support the video tag.
+                    <video autoPlay loop muted preload='auto'>
+                        <source src={VideoModularHome} type="video/mp4" />
                     </video>
 
 
                 </div>
             </FullWidth>
+
+            <div className='video-general-ugly'>
+                <video src={VideoGeneral} autoPlay loop muted preload='auto' />
+            </div>
+
 
 
         </div>
