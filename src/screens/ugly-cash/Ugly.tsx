@@ -32,6 +32,15 @@ import ReserveScreen from '../../assets/png/ugly/reserve-screen.png';
 import UglyApp from '../../assets/png/ugly/ugly-app.png';
 import UglyScreen from '../../assets/png/ugly/ugly-screen.png';
 
+import Illustration1 from '../../assets/png/ugly/illustration1.png';
+import Illustration2 from '../../assets/png/ugly/illustration2.png';
+import Illustration3 from '../../assets/png/ugly/illustration3.png';
+import Illustration4 from '../../assets/png/ugly/illustration4.png';
+import Illustration5 from '../../assets/png/ugly/illustration5.png';
+import Illustration6 from '../../assets/png/ugly/illustration6.png';
+
+import VideoP2P1 from '../../assets/mp4/ugly/p2p-1.mp4';
+import VideoP2P2 from '../../assets/mp4/ugly/p2p-2.mp4';
 
 const ScrollToTopOnNavigation: React.FC = () => {
     useEffect(() => {
@@ -46,14 +55,16 @@ const Ugly = () => {
         <div>
             <ScrollToTopOnNavigation />
             <ProjectHeader
-                projectTitle="Seller's admin <br /> ecommerce"
-                projectSubtitle="NuBank's personal financial manager."
-                projectDescription="Now the user journey has this first moment without plans. We understood it' s part of the calibration period not setting plans for macro-category."
+                projectTitle="Design System <br />and app concept."
+                projectSubtitle="Mvp of the Ugly Cash product."
+                projectDescription="After the rebrand of the previous app, we recreate the whole experience based on the new objective of the company."
                 logo={MbLogo}
                 backgroundColor='rgba(31, 31, 31, 0.8)'
                 secondaryColor='var(--color-secondary)'
                 backgroundImg={UglyBg}
             />
+
+
 
             <div className='new-app-container'>
                 <h4>A new brand asks for a new app.</h4>
@@ -157,7 +168,7 @@ const Ugly = () => {
                 <div className='modular-home-container'>
                     <div className='modular-home-title'>
                         <h1> Modular <br /> Home Screen</h1>
-                        <h3>Subtitle for the Section</h3>
+                        <h3>The idea is to have a variable home screen considering user jouney and needs from the business side too.</h3>
                     </div>
                     <video autoPlay loop muted preload='auto'>
                         <source src={VideoModularHome} type="video/mp4" />
@@ -167,11 +178,50 @@ const Ugly = () => {
                 </div>
             </FullWidth>
 
+            <FullWidth backgroundColor='#191919'>
+
+                <div className='branding-container'>
+                    <div className='branding-title'>
+                        <h1>New <br />illustration <br />style</h1>
+                        <p>Analog + ignorant intervention</p>
+                    </div>
+
+                    <div className='illustration-imgs'>
+                        <img src={Illustration1} alt="Illustration1" />
+                        <img src={Illustration2} alt="Illustration2" />
+                        <img src={Illustration3} alt="Illustration3" />
+                        <img src={Illustration4} alt="Illustration4" />
+                        <img src={Illustration5} alt="Illustration5" />
+                        <img src={Illustration6} alt="Illustration6" />
+                    </div>
+
+                    <p style={{ color: "#FA00FF" }} >
+                        My role: I was part of the team to define the style of the new brand on the product side.
+                    </p>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1210" height="2" viewBox="0 0 1210 2" fill="none">
+                        <path d="M0 1H1210" stroke="#FA00FF" stroke-width="2" />
+                    </svg>
+
+                    <div className='animation-container'>
+                        <div className='branding-title'>
+                            <h1>Cool <br />animations</h1>
+                            <p>So real-time updating all tokens from figma to code.</p>
+                        </div>
+                        <div className='video-container-uc'>
+                            <video autoPlay loop muted preload='auto' src={VideoP2P1} />
+                            <video autoPlay loop muted preload='auto' src={VideoP2P2} />
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </FullWidth>
+            
             <div className='video-general-ugly'>
                 <video src={VideoGeneral} autoPlay loop muted preload='auto' />
             </div>
-
-
 
         </div>
     )
