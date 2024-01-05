@@ -80,7 +80,7 @@ const Home = () => {
                         logo={MbLogo}
                         backgroundColor='#141414'
                         secondaryColor='var(--color-secondary)'
-                        link='https://apps.apple.com/uy/app/ugly-cash/id1587912468'
+                        link='/uglycash'
                     />
                 </section>
             </Element>

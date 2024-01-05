@@ -1,0 +1,129 @@
+p{
+    margin: unset;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+    li {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+}
+
+.design-system-container {
+    display: flex;
+    flex-direction: column;
+    padding: 72px 64px;
+    gap: 64px;
+    color: var(--color-secondary);
+    flex: 1;
+
+
+    .design-system-subtitle {
+
+        padding-top: 32px;
+        border-top: 2px solid #FA00FF;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        p {
+            color: #858585;
+        }
+
+                
+        .figma-tokens{
+            padding-top: 48px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            img{
+                width: 700px;
+                height: fit-content;
+            }
+
+            img.push{
+                width: 160px;
+            }
+        }
+    }
+
+    .design-system-topics {
+
+        display: flex;
+        padding: 64px 0px;
+        gap: 104px;
+        
+
+        img{
+            width: fit-content;
+            height: 72px;
+            object-fit: contain;
+        }
+
+        .topic-item {
+            display: flex;
+            flex-direction: column;
+            gap: 56px;
+            justify-content: flex-start;
+
+            .topic-item-title {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+
+        .topic-item.tokens-container {
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                li{
+                    padding: 8px 12px;
+                    background-color: var(--color-secondary);
+                    border-radius: 24px;
+                    color: var(--color-primary);
+                    width: fit-content;
+                    font-family: helvetica, sans-serif;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .topic-item {
+
+            .components-imgs{
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                img{
+                    height: fit-content;
+                    width: 260px;
+                }
+            }
+        }
+
+
+    }
+
+    .modular-home-container {
+        display: flex;
+                
+        .modular-home-title {
+            display: flex;
+            gap: 24px;
+        }
+        
+    }
+}
