@@ -69,7 +69,7 @@ const Ugly = () => {
             <div className='new-app-container'>
                 <h4>A new brand asks for a new app.</h4>
                 <div className='new-app-imgs'>
-                    <div className='new-app-item'>
+                    <div className='new-app-item reserve'>
                         <div className='new-app-title'>
                             <img src={ReserveApp} className='app-icon' alt="ReserveApp" />
                             <p>Reserve</p>
@@ -85,7 +85,7 @@ const Ugly = () => {
                             <path d="M103.854 4.35354C104.049 4.15828 104.049 3.8417 103.854 3.64644L100.672 0.464457C100.476 0.269195 100.16 0.269195 99.9645 0.464457C99.7692 0.65972 99.7692 0.976302 99.9645 1.17156L102.793 3.99999L99.9645 6.82842C99.7692 7.02368 99.7692 7.34026 99.9645 7.53553C100.16 7.73079 100.476 7.73079 100.672 7.53553L103.854 4.35354ZM0.5 4.5L103.5 4.49999L103.5 3.49999L0.5 3.5L0.5 4.5Z" fill="#FA00FF" />
                         </svg>
                     </div>
-                    <div className='new-app-item'>
+                    <div className='new-app-item ugly'>
                         <div className='new-app-title'>
                             <img src={UglyApp} className='app-icon' alt="UglyApp" />
                             <p>Ugly Cash</p>
@@ -213,9 +213,6 @@ const Ugly = () => {
                             <video autoPlay loop muted preload='auto' src={VideoP2P2} />
                         </div>
                     </div>
-
-
-
                 </div>
             </FullWidth>
             
