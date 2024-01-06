@@ -9,9 +9,7 @@ const useIsMobile = () => {
     const [isMobile] = useState(window.innerWidth <= 768);
 
     return isMobile;
-
 };
-
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, isLoop = true }) => {
 
@@ -21,10 +19,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, isLoop = true }) => {
         return isMobile ? { controls: true , style: { backgroundColor: 'rgba(100, 100, 100, 0.1)' }} : { autoPlay: true };
     };
 
-    console.log(videoAttributes());
-
     return (
-
         <video loop={isLoop} muted preload='auto' {...videoAttributes()} >
             <source src={video} type="video/mp4" />
         </video>
