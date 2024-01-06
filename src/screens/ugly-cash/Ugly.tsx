@@ -4,6 +4,7 @@ import './Ugly.scss';
 import { Link } from 'react-router-dom';
 import { MbLogo } from "../../assets/svg";
 import ProjectHeader from '../../components/project-header/ProjectHeader';
+import VideoPlayer from '../../components/video-player/VideoPlayer';
 
 import UglyBg from '../../assets/png/ugly/bg-ugly.png';
 import VideoModularHome from '../../assets/mp4/ugly/modular-home.mp4';
@@ -171,10 +172,8 @@ const Ugly = () => {
                         <h1> Modular <br /> Home Screen</h1>
                         <h3>The idea is to have a variable home screen considering user jouney and needs from the business side too.</h3>
                     </div>
-                    <video autoPlay loop muted preload='auto'>
-                        <source src={VideoModularHome} type="video/mp4" />
-                    </video>
-
+                    
+                    <VideoPlayer video={VideoModularHome} isAutoPlay={true} isLoop={true} />
 
                 </div>
             </FullWidth>
@@ -210,16 +209,17 @@ const Ugly = () => {
                             <p>So real-time updating all tokens from figma to code.</p>
                         </div>
                         <div className='video-container-uc'>
-                            <video autoPlay loop muted preload='auto' src={VideoP2P1} />
-                            <video autoPlay loop muted preload='auto' src={VideoP2P2} />
+                            <VideoPlayer video={VideoP2P1} isAutoPlay={true} isLoop={true} />
+                            <VideoPlayer video={VideoP2P2} isAutoPlay={true} isLoop={true} />
                         </div>
                     </div>
                 </div>
             </FullWidth>
 
             <div className='video-general-ugly'>
-                <video src={VideoGeneral} autoPlay loop muted preload='auto' />
+                <VideoPlayer video={VideoGeneral} isAutoPlay={true} isLoop={true} />
             </div>
+
 
         </div>
     )
