@@ -26,7 +26,7 @@ import Budget from '../../assets/png/meli/budget.png';
 import Push from '../../assets/png/meli/push.png';
 import BgNu from '../../assets/png/bg-nu.png'
 
-
+import { ScrollToTopOnNavigation } from '../../components/scroll-up/ScrollToTopOnNavigation';
 
 interface IndicatorProps {
     text: string;
@@ -54,6 +54,7 @@ const Nubank = () => {
 
     return (
         <div>
+            <ScrollToTopOnNavigation />
             <ProjectHeader
                 projectTitle='Consumption <br /> Coach'
                 projectSubtitle="NuBank's personal financial manager."

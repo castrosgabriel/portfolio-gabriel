@@ -16,7 +16,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, isLoop = true }) => {
     const isMobile = useIsMobile();
 
     const videoAttributes = () => {
-        return isMobile ? { controls: true , style: { backgroundColor: 'rgba(100, 100, 100, 0.1)' }} : { autoPlay: true };
+        return isMobile ? { controls: true, style: { backgroundColor: 'rgba(100, 100, 100, 0.1)' } } : { autoPlay: true };
     };
 
     return (

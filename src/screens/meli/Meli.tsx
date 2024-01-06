@@ -20,9 +20,12 @@ import DesignSystem from '../../assets/png/meli/design-system.png';
 import Result from '../../assets/png/meli/result.png';
 import bgMeli from '../../assets/png/meli/bg-meli.png';
 
+import { ScrollToTopOnNavigation } from '../../components/scroll-up/ScrollToTopOnNavigation';
+
 const Meli = () => {
     return (
         <div>
+            <ScrollToTopOnNavigation />
             <ProjectHeader
                 projectTitle="Redesign: seller's<br> dashboard."
                 projectSubtitle="The new integration experience for Woocommerce."

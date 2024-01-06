@@ -43,13 +43,7 @@ import Illustration6 from '../../assets/png/ugly/illustration6.png';
 import VideoP2P1 from '../../assets/mp4/ugly/p2p-1.mp4';
 import VideoP2P2 from '../../assets/mp4/ugly/p2p-2.mp4';
 
-const ScrollToTopOnNavigation: React.FC = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
-    return null;
-};
+import { ScrollToTopOnNavigation } from '../../components/scroll-up/ScrollToTopOnNavigation';
 
 const Ugly = () => {
     return (

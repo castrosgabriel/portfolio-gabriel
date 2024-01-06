@@ -15,13 +15,7 @@ import Onboarding from '../../assets/png/pan/onboarding.png';
 import Transfer from '../../assets/png/pan/transfer.png';
 import Activities from '../../assets/png/pan/activities.png';
 
-const ScrollToTopOnNavigation: React.FC = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
-    return null;
-};
+import { ScrollToTopOnNavigation } from '../../components/scroll-up/ScrollToTopOnNavigation';
 
 const BancoPan = () => {
     return (
