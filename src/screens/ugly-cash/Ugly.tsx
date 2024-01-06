@@ -172,8 +172,8 @@ const Ugly = () => {
                         <h1> Modular <br /> Home Screen</h1>
                         <h3>The idea is to have a variable home screen considering user jouney and needs from the business side too.</h3>
                     </div>
-                    
-                    <VideoPlayer video={VideoModularHome} isAutoPlay={true} isLoop={true} />
+
+                    <VideoPlayer video={VideoModularHome} isLoop={true} />
 
                 </div>
             </FullWidth>
@@ -209,15 +209,15 @@ const Ugly = () => {
                             <p>So real-time updating all tokens from figma to code.</p>
                         </div>
                         <div className='video-container-uc'>
-                            <VideoPlayer video={VideoP2P1} isAutoPlay={true} isLoop={true} />
-                            <VideoPlayer video={VideoP2P2} isAutoPlay={true} isLoop={true} />
+                            <VideoPlayer video={VideoP2P1} isLoop={true} />
+                            <VideoPlayer video={VideoP2P2} isLoop={true} />
                         </div>
                     </div>
                 </div>
             </FullWidth>
 
             <div className='video-general-ugly'>
-                <VideoPlayer video={VideoGeneral} isAutoPlay={true} isLoop={true} />
+                <VideoPlayer video={VideoGeneral} isLoop={true} />
             </div>
 
 
