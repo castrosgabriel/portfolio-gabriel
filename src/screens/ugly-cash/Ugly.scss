@@ -263,6 +263,7 @@ ul {
 
     .new-app-container {
         padding: 40px;
+        gap: 32px;
 
         .rebrand-arrow {
             display: none;
@@ -274,7 +275,7 @@ ul {
 
         .new-app-imgs {
             flex-direction: column;
-            gap: 32px;
+            gap: 24px;
 
             .new-app-title {
                 gap: 16px;
@@ -288,8 +289,8 @@ ul {
                 gap: 8px;
 
                 img {
-                    height: 70vh;
-                    width: fit-content;
+                    width: 90vw;
+                    height: fit-content;
                 }
             }
         }
@@ -324,6 +325,11 @@ ul {
             .topic-item.template-container {
                 border: none;
                 padding: 0;
+            }
+
+            img {
+                width: 72px;
+                height: auto;
             }
 
             .topic-item {
@@ -378,6 +384,7 @@ ul {
 
             img {
                 width: 80px;
+                height: auto;
             }
         }
 

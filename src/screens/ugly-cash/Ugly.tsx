@@ -64,8 +64,6 @@ const Ugly = () => {
                 backgroundImg={UglyBg}
             />
 
-
-
             <div className='new-app-container'>
                 <h4>A new brand asks for a new app.</h4>
                 <div className='new-app-imgs'>
@@ -106,10 +104,12 @@ const Ugly = () => {
 
                     <div className='design-system-topics'>
                         <div className="topic-item tokens-container">
+
                             <div className='topic-item-title'>
                                 <img src={Tokens} alt="Tokens" />
                                 <h3>Tokens</h3>
                             </div>
+
                             <ul>
                                 <li>Typescales</li>
                                 <li>Colors</li>
@@ -117,6 +117,7 @@ const Ugly = () => {
                                 <li>Styling</li>
                             </ul>
                         </div>
+
                         <div className="topic-item components-container">
                             <div className='topic-item-title'>
                                 <img src={Components} alt="Components" />
@@ -215,7 +216,7 @@ const Ugly = () => {
                     </div>
                 </div>
             </FullWidth>
-            
+
             <div className='video-general-ugly'>
                 <video src={VideoGeneral} autoPlay loop muted preload='auto' />
             </div>
