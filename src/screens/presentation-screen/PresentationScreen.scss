@@ -71,8 +71,6 @@ a {
           gap: 0;
           line-height: 100%;
           font-weight: 400;
-
-
         }
       }
     }
@@ -191,8 +189,9 @@ a {
 
   .title-name-container {
 
-    img{
+    img {
       width: 30vw;
+      height: 50vh;
       object-fit: contain;
     }
 
@@ -201,12 +200,9 @@ a {
         font-size: 4rem;
       }
 
-      .line-1 {}
-
-      .line-2 {}
-
       .line-3 {
         margin-left: -32px;
+
         .clients-container {
           display: none;
 
@@ -214,11 +210,8 @@ a {
             color: none;
           }
 
-          h3 {}
         }
       }
-
-      .line-4 {}
 
       .line-castro {
         gap: 8px;
@@ -228,8 +221,6 @@ a {
           width: 40px;
         }
       }
-
-      h1 {}
     }
   }
 
