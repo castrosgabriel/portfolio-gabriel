@@ -192,14 +192,19 @@ a {
   .title-name-container {
 
     .title-name {
-
+      h1{
+        font-size: 4rem;
+      }
       .line-1 {}
 
       .line-2 {}
 
       .line-3 {
         .clients-container {
-          .item-container:hover {}
+          display: none;
+          .item-container:hover {
+            color: none;
+          }
 
           h3 {}
         }
