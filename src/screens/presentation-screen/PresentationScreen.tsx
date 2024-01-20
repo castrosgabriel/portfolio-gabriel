@@ -71,10 +71,10 @@ const PresentationScreen = () => {
               <div className='line-3'>
                 <h1>product</h1>
                 <div className='clients-container'>
-                  <h3>NUBANK</h3>
-                  <h3>MERCADO LIVRE</h3>
-                  <h3>PAN</h3>
-                  <h3>UGLY CASH</h3>
+                  <h3 className='item-container'>NUBANK</h3>
+                  <h3 className='item-container'>MERCADO LIVRE</h3>
+                  <h3 className='item-container'>PAN</h3>
+                  <h3 className='item-container'>UGLY CASH</h3>
                 </div>
               </div>
               <h1 className='line-4'>designer</h1>
