@@ -91,13 +91,13 @@
         overflow: hidden;
         align-items: flex-start;
         padding-right: 24px;
+        width: 100%;
 
 
         img {
-          height: auto;
+          height: 50vh;
           width: 100%;
         }
-
       }
 
       .project-info {
