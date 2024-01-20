@@ -3,6 +3,7 @@ import ProjectComponent from "../../components/project-component/ProjectComponen
 import ProjectNav, { ListItem } from '../../components/project-nav/ProjectNav';
 import { Element } from "react-scroll";
 import { Helmet } from "react-helmet";
+import LoadingScreen from "../../components/loading-screen/LoadingScreen";
 import {
     MbLogo,
     MeliLogo,
@@ -32,16 +33,12 @@ const Home = () => {
         <div>
             <Helmet>
                 <title>Gabriel Castro</title>
-                <meta name="description" content="Gabriel Castro's Portfolio" />
-                <meta property="og:title" content="Gabriel Castro" />
-                <meta property="og:description" content="Check my portfolio" />
-                <meta property="og:image" content="../../assets/png/photo-main.png" />
-                <meta property="og:url" content="Gabriel Castro" />
-                <meta name="twitter:card" content="../../assets/png/photo-main.png" />
             </Helmet>
             <ProjectNav
                 listItems={projectList}
             />
+
+            <LoadingScreen />
 
             <Element name='section-home'>
                 <section id="section-home">

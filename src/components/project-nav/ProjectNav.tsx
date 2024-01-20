@@ -34,6 +34,8 @@ const ProjectNav: React.FC<ProjectNavProps> = ({
             });
         };
 
+        handleScroll();
+
         window.addEventListener('scroll', handleScroll);
 
         return () => {
