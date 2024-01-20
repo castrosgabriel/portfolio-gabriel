@@ -1,5 +1,4 @@
 import React from 'react';
-import { useEffect } from 'react';
 import './Meli.scss';
 import { MeliLogo } from "../../assets/svg";
 import ProjectHeader from '../../components/project-header/ProjectHeader';
@@ -9,7 +8,6 @@ import Download from '../../assets/png/meli/download.png';
 import Problem from '../../assets/png/meli/problem.png';
 import User from '../../assets/png/meli/user.png';
 import Current1 from '../../assets/png/meli/current.png';
-import Current2 from '../../assets/png/meli/current-2.png';
 import Admin from '../../assets/png/meli/admin.png';
 
 import Hierarchy from '../../assets/png/meli/hierarchy.png';
@@ -50,7 +48,7 @@ const Meli = () => {
                             Simple Setup.
                         </h2>
                     </div>
-                    <img src={Download} />
+                    <img alt='download' src={Download} />
                 </div>
 
             </FullWidth>
@@ -59,31 +57,31 @@ const Meli = () => {
             </FullWidth>
             <FullWidth backgroundColor='#F3F3F3'>
                 <div className='problems'>
-                    <img src={Problem} />
+                    <img alt='problem' src={Problem} />
                     <div className='problem-list'>
                         <h3>_problem</h3>
                         <ul>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
-                                    <path d="M1.88037 33.3354L32.6419 2.57389M32.6419 2.57389L1.88037 2.57389M32.6419 2.57389L32.6419 33.3354" stroke="#FF0000" stroke-width="4" />
+                                    <path d="M1.88037 33.3354L32.6419 2.57389M32.6419 2.57389L1.88037 2.57389M32.6419 2.57389L32.6419 33.3354" stroke="#FF0000" strokeWidth="4" />
                                 </svg>
                                 <h1>Contact Rate</h1>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
-                                    <path d="M1.88037 33.3354L32.6419 2.57389M32.6419 2.57389L1.88037 2.57389M32.6419 2.57389L32.6419 33.3354" stroke="#FF0000" stroke-width="4" />
+                                    <path d="M1.88037 33.3354L32.6419 2.57389M32.6419 2.57389L1.88037 2.57389M32.6419 2.57389L32.6419 33.3354" stroke="#FF0000" strokeWidth="4" />
                                 </svg>
                                 <h1>Churn</h1>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
-                                    <path d="M33.6418 1.41699L2.88028 32.1785M2.88028 32.1785L33.6418 32.1785M2.88028 32.1785L2.88029 1.41699" stroke="#FF0000" stroke-width="4" />
+                                    <path d="M33.6418 1.41699L2.88028 32.1785M2.88028 32.1785L33.6418 32.1785M2.88028 32.1785L2.88029 1.41699" stroke="#FF0000" strokeWidth="4" />
                                 </svg>
                                 <h1>Bad feedback</h1>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
-                                    <path d="M33.6418 1.41699L2.88028 32.1785M2.88028 32.1785L33.6418 32.1785M2.88028 32.1785L2.88029 1.41699" stroke="#FF0000" stroke-width="4" />
+                                    <path d="M33.6418 1.41699L2.88028 32.1785M2.88028 32.1785L33.6418 32.1785M2.88028 32.1785L2.88029 1.41699" stroke="#FF0000" strokeWidth="4" />
                                 </svg>
                                 <h1>Lack of information</h1>
                             </li>
@@ -102,7 +100,7 @@ const Meli = () => {
                                 with little to none development team or knowledge to do any complex integration.
                             </h2>
                         </div>
-                        <img src={User} />
+                        <img alt='userimg'src={User} />
                     </div>
                 </div>
             </FullWidth>
@@ -212,7 +210,7 @@ const Meli = () => {
                             <div className='url-bar' />
                         </div>
                         <div className='current-img'>
-                            <img src={Current1} />
+                            <img alt='current1' src={Current1} />
                         </div>
                     </div>
                 </div>
@@ -230,7 +228,7 @@ const Meli = () => {
                             <div className='url-bar' />
                         </div>
                         <div className='video-crop'>
-                            <img src={Admin} />
+                            <img alt='admin' src={Admin} />
                         </div>
 
                     </div>
@@ -241,12 +239,12 @@ const Meli = () => {
                     <div className='bento-column column-1'>
                         <div className='box hierarchy'>
                             <h2><span className='blue'>Hierarchy improvement:</span> making sure the user will see and have access to the main setup before start.</h2>
-                            <img src={Hierarchy} />
+                            <img alt='hierarchy' src={Hierarchy} />
                         </div>
                         <div className='bento-row'>
                             <div className='box step'>
                                 <h2><span className='blue'>Visual feedback</span>  on the steps and narrative navigation.</h2>
-                                <img src={Step} />
+                                <img alt='step' src={Step} />
                             </div>
                             <div className='bento-column text-column'>
                                 <div className='box journey'>
@@ -263,11 +261,11 @@ const Meli = () => {
                     <div className='bento-column column-2'>
                         <div className='box hub'>
                             <h2><span className='blue'>Payment method hub</span> improvement</h2>
-                            <img src={Hub} />
+                            <img alt='hub' src={Hub} />
                         </div>
                         <div className='box design-system'>
                             <h2><span className='blue'>Design System </span>application</h2>
-                            <img src={DesignSystem} />
+                            <img alt='design-system' src={DesignSystem} />
                         </div>
                     </div>
                 </div>
@@ -279,7 +277,7 @@ const Meli = () => {
                         <h1>Results</h1>
                     </div>
                     <div className='numbers-container'>
-                        <img src={Result} />
+                        <img alt='result' src={Result} />
                         <div className='number-list'>
                             <div className='number-item'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">

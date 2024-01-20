@@ -6,9 +6,6 @@ import './PresentationScreen.scss';
 import ScrollUp from '../../components/scroll-up/ScrollUp';
 import Menu from '../../components/menu/Menu';
 import menuList from '../../components/menu/MenuList';
-
-import Flag from '../../assets/svg/brazil-flag.svg';
-import MainPhoto from '../../assets/png/photo-main.png';
 import Circle from '../../assets/svg/circle.svg';
 
 import GabPhoto from '../../assets/png/photo-gab.png';
@@ -25,7 +22,7 @@ const PresentationScreen = () => {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
 
   return (
     <>
@@ -38,18 +35,27 @@ const PresentationScreen = () => {
       <div className='bg-blur' />
 
       <div className='presentation-screen-container'>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: .5, delay: 1.7 }}
+        >
+          <ScrollUp />
+        </motion.div>
 
-        <ScrollUp />
-
-        <div className='circle'>
-          <motion.img
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: .5, delay: 2 }}
+          className='circle'>
+          <motion.img alt='circle'
             animate={{
               rotate: -360
             }} transition={{
               repeat: Infinity, duration: 12, ease: 'linear'
             }}
             src={Circle} />
-        </div>
+        </motion.div>
 
         <div ref={ref} className='presentation-screen'>
 
@@ -60,15 +66,38 @@ const PresentationScreen = () => {
               color='#606060' />
           </div>
 
-          <div className='title-name-container'>
-            <img src={GabPhoto} />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.8 }}
+            className='title-name-container'>
+            <img alt='gabphoto' src={GabPhoto} />
             <div className='title-name'>
-              <h1 className='line-1'>Gabriel</h1>
-              <div className='line-castro line-2'>
-                <img src={ElementGreen} />
+              <motion.h1
+                initial={{ x: -80, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 1.8, ease: 'easeInOut' }}
+                className='line-1'>
+                Gabriel
+              </motion.h1>
+              <motion.div
+                initial={{ x: -80, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 2, ease: 'easeInOut' }}
+                className='line-castro line-2'>
+                <motion.img
+                  alt='element'
+                  initial={{ rotate: 0}}
+                  animate={{ rotate: 360 }}
+                  transition={{ duration:20, repeat: Infinity, ease: 'linear' }}
+                  src={ElementGreen} />
                 <h1>Castro</h1>
-              </div>
-              <div className='line-3'>
+              </motion.div>
+              <motion.div
+                initial={{ x: -80, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 2.2, ease: 'easeInOut' }}
+                className='line-3'>
                 <h1>product</h1>
                 <div className='clients-container'>
                   <h3 className='item-container'>NUBANK</h3>
@@ -76,10 +105,16 @@ const PresentationScreen = () => {
                   <h3 className='item-container'>PAN</h3>
                   <h3 className='item-container'>UGLY CASH</h3>
                 </div>
-              </div>
-              <h1 className='line-4'>designer</h1>
+              </motion.div>
+              <motion.h1
+                initial={{ x: -80, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 2.4, ease: 'easeInOut' }}
+                className='line-4'>
+                designer
+              </motion.h1>
             </div>
-          </div>
+          </motion.div>
           <div className='div-spacer' />
         </div>
       </div>

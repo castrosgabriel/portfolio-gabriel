@@ -8,8 +8,8 @@ const container = {
     visible: {
         opacity: 1,
         transition: {
-            delayChildren: 0.3,
-            staggerChildren: 0.1
+            delayChildren: 3,
+            staggerChildren: 0.1,
         }
     }
 };
@@ -40,7 +40,7 @@ const Menu: React.FC<MenuProps & { hideBackButton?: boolean }> = ({
 
     const pathURL: string = window.location.pathname;
     sectionList = sectionList.map((section) => {
-        section.active = section.link == pathURL
+        section.active = section.link === pathURL
         return section
     })
 
