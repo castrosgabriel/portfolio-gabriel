@@ -23,7 +23,7 @@ a {
   height: 150vw;
   right: -80vw;
   bottom: -50vh;
-  opacity: .4;
+  opacity: .6;
   -webkit-mask: radial-gradient(red, transparent, transparent);
   mask: radial-gradient(red, transparent, transparent);
   filter: url(#grain) grayscale(1);
@@ -117,7 +117,7 @@ a {
 
     img {
       position: absolute;
-      left: 80vw;
+      left: 77vw;
       top: 75vh;
       width: 320px;
       height: 320px;
@@ -185,7 +185,6 @@ a {
 @media screen and (max-width: 700px) {
 
   .title-name-container {
-
     img {
       width: 30vw;
       height: 50vh;
@@ -206,7 +205,6 @@ a {
           .item-container:hover {
             color: none;
           }
-
         }
       }
 
@@ -232,7 +230,6 @@ a {
     .presentation-screen {
       flex-direction: column-reverse;
       justify-content: flex-end;
-
 
       .main-content {
         padding: 0px 24px 32px 24px;

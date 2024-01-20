@@ -79,44 +79,8 @@ const PresentationScreen = () => {
               </div>
               <h1 className='line-4'>designer</h1>
             </div>
-
           </div>
-
-          {/* <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 75 },
-              visible: { opacity: 1, y: 0 }
-            }}
-            initial="hidden"
-            animate={mainControls}
-            transition={{ duration: 0.5, delay: 0 }}
-            className='main-content'>
-
-            <div className='title-main-container'>
-              <motion.h1
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 }
-                }}
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
-                <span style={{ color: '#05FF00' }}>_</span>
-                Gabriel Castro <br />
-                product design <br />
-                specialist
-              </motion.h1>
-              <img src={Flag} />
-            </div>
-
-            <div className='photo-container'>
-              <img src={MainPhoto} />
-            </div>
-          </motion.div> */}
-
           <div className='div-spacer' />
-
         </div>
       </div>
     </>

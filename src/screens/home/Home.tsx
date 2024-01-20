@@ -21,6 +21,7 @@ import "./Home.scss";
 const Home = () => {
 
     const projectList: ListItem[] = [
+        { id: 'section-home', title: '', dontShow: true },
         { id: 'section-0', title: 'nubank' },
         { id: 'section-1', title: 'mercado livre' },
         { id: 'section-2', title: 'ugly cash' },
@@ -38,12 +39,16 @@ const Home = () => {
                 <meta property="og:url" content="Gabriel Castro" />
                 <meta name="twitter:card" content="../../assets/png/photo-main.png" />
             </Helmet>
-            {/* <ProjectNav
+            <ProjectNav
                 listItems={projectList}
-            /> */}
-            <section>
-                <PresentationScreen />
-            </section>
+            />
+
+            <Element name='section-home'>
+                <section id="section-home">
+                    <PresentationScreen />
+                </section>
+            </Element>
+
             <Element name='section-0'>
                 <section id='section-0'>
                     <ProjectComponent
