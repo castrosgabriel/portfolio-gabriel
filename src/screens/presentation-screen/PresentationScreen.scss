@@ -3,18 +3,125 @@ a {
   color: unset;
 }
 
+
+
+.bg-blur {
+  z-index: -2;
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  width: 100vw;
+  height: 100vh;
+}
+
+.grain-container {
+  z-index: -1;
+  position: absolute;
+  width: 200vw;
+  height: 200vw;
+  right: -90vw;
+  bottom: -110vh;
+  opacity: .4;
+  -webkit-mask: radial-gradient(red, transparent, transparent);
+  mask: radial-gradient(red, transparent, transparent);
+  filter: url(#grain) grayscale(1);
+  background-color: rgb(255, 255, 255);
+  animation: identifier 120s linear infinite alternate;
+}
+
+.title-name-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+
+  img {
+    height: 70vh;
+  }
+
+  .title-name {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .line-1{
+      margin-left: -16px;
+      z-index: -1;
+    }
+
+    .line-2{
+      margin-left : -16px;
+    }
+
+    .line-3{
+      margin-left: -120px;
+      display: flex;
+      align-items: flex-end;
+      gap: 20px;
+
+      .clients-container {
+        display: flex;
+        flex-direction: column;
+
+        h3{
+          font-family: 'Fontspring-DEMO-integralcf-regular', sans-serif;
+          color: var(--color-secondary);
+          font-size: 20px;
+          gap: 0;
+          line-height: 100%;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .line-4{
+      margin-left : -16px;
+    }
+
+    .line-castro {
+      display: flex;
+      gap: 16px;
+      align-items: flex-end;
+
+      img {
+        height: 80px;
+        width: 80px;
+      }
+    }
+
+    h1 {
+      color: var(--color-secondary);
+      font-family: 'Fontspring-DEMO-integralcf-regular', sans-serif;
+      font-size: 7rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+    }
+  }
+}
+
+
+
+@font-face {
+  font-family: 'Fontspring-DEMO-integralcf-regular';
+  src: url(../../assets/font/Fontspring-DEMO-integralcf-regular.otf) format('opentype');
+}
+
+
 .presentation-screen-container {
   display: flex;
   justify-content: center;
   overflow: hidden;
+  cursor: var(--cursor-main);
 
   .circle {
     position: relative;
 
     img {
       position: absolute;
-      left: 75vw;
-      top: 70vh;
+      left: 85vw;
+      top: 75vh;
+      width: 320px;
+      height: 320px;
     }
   }
 
@@ -23,7 +130,7 @@ a {
     display: flex;
     height: 100vh;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: flex-start;
     max-width: 1440px;
 
@@ -31,7 +138,6 @@ a {
       display: flex;
       width: 100%;
     }
-
 
     .main-content {
       display: flex;
@@ -77,22 +183,17 @@ a {
   }
 }
 
-
 @media screen and (max-width: 600px) {
 
   .presentation-screen-container {
-
     .circle {
-  
       img {
         left: 50vw;
         top: 60vh;
       }
     }
-  
 
     .presentation-screen {
-
       flex-direction: column-reverse;
       justify-content: flex-end;
 
@@ -109,11 +210,9 @@ a {
             width: 32px;
           }
 
-
           .div-spacer {
             display: none;
           }
-
         }
       }
     }

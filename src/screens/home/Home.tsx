@@ -38,9 +38,9 @@ const Home = () => {
                 <meta property="og:url" content="Gabriel Castro" />
                 <meta name="twitter:card" content="../../assets/png/photo-main.png" />
             </Helmet>
-            <ProjectNav
+            {/* <ProjectNav
                 listItems={projectList}
-            />
+            /> */}
             <section>
                 <PresentationScreen />
             </section>

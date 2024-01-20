@@ -10,6 +10,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --cursor-main: url('./assets/svg/cursor.svg'), auto;
+  --cursor-hover: url('./assets/svg/cursor-hover.svg'), auto;
   --color-primary: black;
   --color-secondary: white;
   margin: 0;
@@ -118,4 +120,3 @@ code {
   }
 
 }
-

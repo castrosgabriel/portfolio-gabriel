@@ -31,10 +31,11 @@ export type SectionItem = {
 
 interface MenuProps {
     sectionList: SectionItem[];
+    color?: string;
 }
 
 const Menu: React.FC<MenuProps & { hideBackButton?: boolean }> = ({
-    sectionList, hideBackButton
+    sectionList, hideBackButton, color = 'var(--color-primary)'
 }) => {
 
     const pathURL: string = window.location.pathname;
@@ -71,12 +72,13 @@ const Menu: React.FC<MenuProps & { hideBackButton?: boolean }> = ({
                         <Link to={sectionItem.link}>
 
                             <motion.li
+                                style={{ color: color }}
                                 className={getActiveClass(sectionItem)}
                                 key={sectionItem.id}
                                 variants={item}
                                 whileHover={{
                                     y: -4,
-                                    borderBottom: 'solid 4px var(--color-primary)'
+                                    borderBottom: `solid 4px ${color}`,
                                 }}>
                                 <h2>
                                     {sectionItem.sectionName}
