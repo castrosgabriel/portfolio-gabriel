@@ -191,17 +191,25 @@ a {
 
   .title-name-container {
 
+    img{
+      width: 30vw;
+      object-fit: contain;
+    }
+
     .title-name {
-      h1{
+      h1 {
         font-size: 4rem;
       }
+
       .line-1 {}
 
       .line-2 {}
 
       .line-3 {
+        margin-left: -32px;
         .clients-container {
           display: none;
+
           .item-container:hover {
             color: none;
           }
@@ -213,7 +221,12 @@ a {
       .line-4 {}
 
       .line-castro {
-        img {}
+        gap: 8px;
+
+        img {
+          height: 40px;
+          width: 40px;
+        }
       }
 
       h1 {}
