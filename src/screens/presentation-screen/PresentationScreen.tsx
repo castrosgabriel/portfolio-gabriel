@@ -77,7 +77,9 @@ const PresentationScreen = () => {
             <Menu
               hideBackButton
               sectionList={menuList}
-              color='#606060' />
+              color='#606060' 
+              delay={2.2}
+              />
           </div>
 
           <motion.div
