@@ -1,7 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
 import './Ugly.scss';
-import { Link } from 'react-router-dom';
 import { MbLogo } from "../../assets/svg";
 import ProjectHeader from '../../components/project-header/ProjectHeader';
 import VideoPlayer from '../../components/video-player/VideoPlayer';
@@ -194,7 +192,7 @@ const Ugly = () => {
                     </p>
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="1210" height="2" viewBox="0 0 1210 2" fill="none">
-                        <path d="M0 1H1210" stroke="#FA00FF" stroke-width="2" />
+                        <path d="M0 1H1210" stroke="#FA00FF" strokeWidth="2" />
                     </svg>
 
                     <div className='animation-container'>

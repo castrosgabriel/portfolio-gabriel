@@ -27,9 +27,9 @@
     li {
         text-align: unset;
         display: block;
-        color: var(--color-primary);
+        // color: var(--color-primary);
         opacity: 1;
-        cursor: pointer;
+        cursor: var(--cursor-hover);
         padding: 12px 0px;
 
         &.active {

@@ -6,6 +6,7 @@ export type ListItem = {
     id: any;
     title: string;
     blackText?: boolean;
+    dontShow?: boolean;
 }
 
 interface ProjectNavProps {
@@ -33,6 +34,8 @@ const ProjectNav: React.FC<ProjectNavProps> = ({
             });
         };
 
+        handleScroll();
+
         window.addEventListener('scroll', handleScroll);
 
         return () => {
@@ -45,9 +48,12 @@ const ProjectNav: React.FC<ProjectNavProps> = ({
 
         const isActive = activeSection === listItem.id;
         const isBlackActive = listItems.find((item) => item.id === activeSection)?.blackText || false;
+        const isDontShow = listItems.find((item) => item.id === activeSection)?.dontShow || false;
+
 
         className += isActive ? 'active ' : '';
         className += isBlackActive ? 'text-black ' : '';
+        className += isDontShow ? 'dont-show ' : '';
 
         return className.trim();
     };

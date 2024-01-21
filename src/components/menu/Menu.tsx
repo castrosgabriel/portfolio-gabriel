@@ -3,24 +3,7 @@ import { motion } from 'framer-motion';
 import './Menu.scss';
 import { Link } from 'react-router-dom';
 
-const container = {
-    hidden: { opacity: 1 },
-    visible: {
-        opacity: 1,
-        transition: {
-            delayChildren: 0.3,
-            staggerChildren: 0.1
-        }
-    }
-};
 
-const item = {
-    hidden: { x: -20, opacity: 0 },
-    visible: {
-        x: 0,
-        opacity: 1
-    }
-};
 
 export type SectionItem = {
     id: any;
@@ -31,15 +14,36 @@ export type SectionItem = {
 
 interface MenuProps {
     sectionList: SectionItem[];
+    color?: string;
+    delay?: number;
 }
 
 const Menu: React.FC<MenuProps & { hideBackButton?: boolean }> = ({
-    sectionList, hideBackButton
+    sectionList, hideBackButton, color = 'var(--color-primary)', delay = 0.2
 }) => {
+
+    const container = {
+        hidden: { opacity: 1 },
+        visible: {
+            opacity: 1,
+            transition: {
+                delayChildren: delay,
+                staggerChildren: 0.1,
+            }
+        }
+    };
+    
+    const item = {
+        hidden: { x: -20, opacity: 0 },
+        visible: {
+            x: 0,
+            opacity: 1
+        }
+    };
 
     const pathURL: string = window.location.pathname;
     sectionList = sectionList.map((section) => {
-        section.active = section.link == pathURL
+        section.active = section.link === pathURL
         return section
     })
 
@@ -71,12 +75,13 @@ const Menu: React.FC<MenuProps & { hideBackButton?: boolean }> = ({
                         <Link to={sectionItem.link}>
 
                             <motion.li
+                                style={{ color: color }}
                                 className={getActiveClass(sectionItem)}
                                 key={sectionItem.id}
                                 variants={item}
                                 whileHover={{
                                     y: -4,
-                                    borderBottom: 'solid 4px var(--color-primary)'
+                                    borderBottom: `solid 4px ${color}`,
                                 }}>
                                 <h2>
                                     {sectionItem.sectionName}

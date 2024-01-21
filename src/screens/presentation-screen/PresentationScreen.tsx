@@ -1,96 +1,145 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
 
-import Menu from '../../components/menu/Menu';
 import './PresentationScreen.scss';
 
-import Flag from '../../assets/svg/brazil-flag.svg';
-import MainPhoto from '../../assets/png/photo-main.png';
+import ScrollUp from '../../components/scroll-up/ScrollUp';
+import Menu from '../../components/menu/Menu';
+import menuList from '../../components/menu/MenuList';
 import Circle from '../../assets/svg/circle.svg';
 
-import menuList from '../../components/menu/MenuList';
+import GabPhoto from '../../assets/png/photo-gab.png';
+import ElementGreen from '../../assets/svg/element.svg';
 
-import ScrollUp from '../../components/scroll-up/ScrollUp';
+const containerClients = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 2.5,
+      staggerChildren: 0.15,
+      ease: 'easeInOut'
+    }
+  }
+}
 
-
+const itemClients = {
+  hidden: {opacity: 0 },
+  visible: {
+    opacity: 1
+  }
+}
 
 const PresentationScreen = () => {
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
   const mainControls = useAnimation();
 
   useEffect(() => {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
-
-
-
+  }, [isInView, mainControls]);
 
   return (
-    <div
-      className='presentation-screen-container'
-    >
+    <>
 
-      <ScrollUp />
+      <div className='bg-blur' />
 
-      <div className='circle'>
-        <motion.img animate={{ rotate: -360 }} transition={{ repeat: Infinity, duration: 12, ease: 'linear' }} src={Circle} />
-      </div>
-
-
-      <div ref={ref} className='presentation-screen'>
-        <div className='menu-container'>
-          <Menu
-            hideBackButton
-            sectionList={menuList} />
-        </div>
-
+      <div className='presentation-screen-container'>
         <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 75 },
-            visible: { opacity: 1, y: 0 }
-          }}
-          initial="hidden"
-          animate={mainControls}
-          transition={{ duration: 0.5, delay: 0 }}
-          className='main-content'>
-
-          <div className='title-main-container'>
-            <motion.h1
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 }
-              }}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-
-              <span style={{ color: '#05FF00' }}>_</span>
-              Gabriel Castro <br />
-              product design <br />
-              specialist
-
-            </motion.h1>
-
-            <img src={Flag} />
-
-          </div>
-
-          <div className='photo-container'>
-            <img src={MainPhoto} />
-          </div>
-
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: .5, delay: 1.7 }}
+        >
+          <ScrollUp />
         </motion.div>
 
-        <div className='div-spacer' />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: .5, delay: 2 }}
+          className='circle'>
+          <motion.img alt='circle'
+            animate={{
+              rotate: -360
+            }} transition={{
+              repeat: Infinity, duration: 12, ease: 'linear'
+            }}
+            src={Circle} />
+        </motion.div>
 
+        <div ref={ref} className='presentation-screen'>
+
+          <div className='menu-container'>
+            <Menu
+              hideBackButton
+              sectionList={menuList}
+              color='#606060' 
+              delay={2.2}
+              />
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.8 }}
+            className='title-name-container'>
+            <img alt='gabphoto' src={GabPhoto} />
+            <div className='title-name'>
+              <motion.h1
+                initial={{ x: -80, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 1.8, ease: 'easeInOut' }}
+                className='line-1'>
+                Gabriel
+              </motion.h1>
+              <motion.div
+                initial={{ x: -80, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 2, ease: 'easeInOut' }}
+                className='line-castro line-2'>
+                <motion.img
+                  alt='element'
+                  initial={{ rotate: 0 }}
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+                  src={ElementGreen} />
+                <h1>Castro</h1>
+              </motion.div>
+              <motion.div
+                initial={{ x: -80, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 2.2, ease: 'easeInOut' }}
+                className='line-3'>
+                <h1>product</h1>
+                <motion.div
+                  variants={containerClients}
+                  className='clients-container'
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <motion.h3 variants={itemClients} className='item-container'>NUBANK</motion.h3>
+                  <motion.h3 variants={itemClients} className='item-container'>MERCADO LIVRE</motion.h3>
+                  <motion.h3 variants={itemClients} className='item-container'>PAN</motion.h3>
+                  <motion.h3 variants={itemClients} className='item-container'>UGLY CASH</motion.h3>
+                </motion.div>
+              </motion.div>
+              <motion.h1
+                initial={{ x: -80, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 2.4, ease: 'easeInOut' }}
+                className='line-4'>
+                designer
+              </motion.h1>
+            </div>
+          </motion.div>
+          <div className='div-spacer' />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
