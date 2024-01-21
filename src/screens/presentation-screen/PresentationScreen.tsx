@@ -11,11 +11,30 @@ import Circle from '../../assets/svg/circle.svg';
 import GabPhoto from '../../assets/png/photo-gab.png';
 import ElementGreen from '../../assets/svg/element.svg';
 
+const containerClients = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 2.5,
+      staggerChildren: 0.15,
+      ease: 'easeInOut'
+    }
+  }
+}
+
+const itemClients = {
+  hidden: {opacity: 0 },
+  visible: {
+    opacity: 1
+  }
+}
+
 const PresentationScreen = () => {
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
   const mainControls = useAnimation();
 
   useEffect(() => {
@@ -26,11 +45,6 @@ const PresentationScreen = () => {
 
   return (
     <>
-      <svg className='grain-container'>
-        <filter id='grain'>
-          <feTurbulence type='fractalNoise' baseFrequency='1' />
-        </filter>
-      </svg>
 
       <div className='bg-blur' />
 
@@ -87,9 +101,9 @@ const PresentationScreen = () => {
                 className='line-castro line-2'>
                 <motion.img
                   alt='element'
-                  initial={{ rotate: 0}}
+                  initial={{ rotate: 0 }}
                   animate={{ rotate: 360 }}
-                  transition={{ duration:20, repeat: Infinity, ease: 'linear' }}
+                  transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
                   src={ElementGreen} />
                 <h1>Castro</h1>
               </motion.div>
@@ -99,12 +113,17 @@ const PresentationScreen = () => {
                 transition={{ duration: 1, delay: 2.2, ease: 'easeInOut' }}
                 className='line-3'>
                 <h1>product</h1>
-                <div className='clients-container'>
-                  <h3 className='item-container'>NUBANK</h3>
-                  <h3 className='item-container'>MERCADO LIVRE</h3>
-                  <h3 className='item-container'>PAN</h3>
-                  <h3 className='item-container'>UGLY CASH</h3>
-                </div>
+                <motion.div
+                  variants={containerClients}
+                  className='clients-container'
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <motion.h3 variants={itemClients} className='item-container'>NUBANK</motion.h3>
+                  <motion.h3 variants={itemClients} className='item-container'>MERCADO LIVRE</motion.h3>
+                  <motion.h3 variants={itemClients} className='item-container'>PAN</motion.h3>
+                  <motion.h3 variants={itemClients} className='item-container'>UGLY CASH</motion.h3>
+                </motion.div>
               </motion.div>
               <motion.h1
                 initial={{ x: -80, opacity: 0 }}

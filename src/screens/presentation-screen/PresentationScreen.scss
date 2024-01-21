@@ -14,7 +14,12 @@ a {
   background-color: #0f0f0f;
   width: 100vw;
   height: 100vh;
-}
+  background-image: url(../../assets/png/bg-grain.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  }
 
 .grain-container {
   z-index: -1;
@@ -117,7 +122,7 @@ a {
 
     img {
       position: absolute;
-      left: 77vw;
+      left: 80vw;
       top: 75vh;
       width: 320px;
       height: 320px;

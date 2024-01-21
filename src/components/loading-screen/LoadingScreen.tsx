@@ -22,7 +22,7 @@ const LoadingScreen: React.FC = () => {
             >
                 <motion.div
                     initial={{ y: 0 }}
-                    animate={{ y: '40vh' }}
+                    animate={{ y: '40vh'}}
                     transition={{ duration: 1.5, delay: 0, ease: cubicBezier(1, 0, 0, 1) }}
                 >
                     <h2>hello</h2>
